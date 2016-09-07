@@ -1,9 +1,9 @@
 // Get the packages we need
-var express    = require('express'),
-    bodyParser = require('body-parser'),
-    mongoose   = require('mongoose'),
+var express          = require('express'),
+    bodyParser       = require('body-parser'),
+    mongoose         = require('mongoose'),
     courseController = require('./server/controllers/CourseController'),
-    app        = express();
+    app              = express();
 
 mongoose.connect('mongodb://localhost:27017/noobsee');
 
