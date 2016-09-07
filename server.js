@@ -10,7 +10,17 @@ var express          = require('express'),
 
 mongoose.connect('mongodb://localhost:27017/noobsee');
 
+app.set('views', __dirname + '/public/views');
+app.set('view engine', 'ejs');
+
+//Sets file paths to start from public
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.get('/', function(req, res) {
+    res.render('./index');
+});
 
 // Create our Express router
 var router = express.Router();
