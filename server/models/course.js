@@ -8,8 +8,8 @@ var CourseSchema = new mongoose.Schema({
     experienceLevel: Number,
     language:        String,
     description:     String,
-    title:           String,
-    userId:          String
+    title:           String
+    // userId:          String
 });
 
 // Export the Mongoose model

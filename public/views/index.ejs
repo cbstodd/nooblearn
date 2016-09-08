@@ -7,13 +7,10 @@
     <title>Nooblearn</title>
     <% include layout/scripts.ejs %>
     </head>
-    <body ng-app="nooblearn">
+    <body ng-app="noobLearn">
+        <% include layout/navbar.ejs %>
         <div class="container">
-            <h3>testing</h3>
-
-            <div ng-controller="MainController">
-                {{ message }}
-            </div>
+            <% include partials/courses.ejs %>
 
         </div>
 

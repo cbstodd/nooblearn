@@ -1,0 +1,45 @@
+<div ng-controller="MainController">
+    <h3>Featured Courses</h3>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-3">
+                Sort by: <select class="" data-style="btn-primary" ng-model="sortCourse">
+                    <option value="title">Course</option>
+                    <option value="language">Language</option>
+                    <option value="experienceLevel">Level</option>
+                </select>
+            </div>
+            <div class="col-lg-1">
+                Limit: <input type="number" class="form-control" step="1" min="0" max="8" ng-model="rowLimit">
+            </div>
+            <div class="col-lg-8"></div>
+        </div><!-- /.col-lg-12 -->
+
+    </div>
+    <hr class="thick-line">
+    <div class="row">
+        <div class="col-lg-8">
+            <ul class="list-group course well" ng-repeat="course in courses">
+                <li>
+                    <h3><b>Course:</b> {{ course.title }}</h3></li>
+                <hr>
+                <li>
+                    <img ng-src="{{course.imageUrl}}" alt="" class="img-responsive img-thumbnail course-thumb">
+                </li>
+                <br>
+                <li>ID: {{course.course_id}}</li>
+                <li><b>Description:</b> {{ course.description }}</li>
+                <li><b>Language:</b> {{ course.language }}</li>
+                <li><b>Level:</b> {{ course.experienceLevel}}</li>
+                <!--<li><b>Progress:</b><br>-->
+                    <!--<div class="progress">-->
+                        <!--<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: {{course.progress | progress}}%">-->
+                            <!--{{ course.progress | progress }}%-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+</div><!--~ End CoursesCtrl ~-->
