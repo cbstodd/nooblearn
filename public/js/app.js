@@ -3,17 +3,17 @@
 var app = angular.module('noobLearn', ['ngRoute'])
                  .config(function( $routeProvider, $locationProvider ) {
                      $routeProvider
-                       .when('/', {
+                       // .when('/', {
                            //TODO: Need to uncomment for production mode
                            //  templateUrl: 'views/home.ejs',
                            // controller:  'HomeController'
-                           templateUrl: 'views/partials/index.ejs',
-                           controller:  'MainController'
-                       })
-                       .when('/courses', {
-                           templateUrl: 'views/partials/index.ejs',
-                           controller:  'MainController'
-                       })
+                           // templateUrl: 'views/partials/index.ejs',
+                           // controller:  'CourseController'
+                       // })
+                       // .when('/courses', {
+                       //     templateUrl: 'views/partials/index.ejs',
+                       //     controller:  'CourseController'
+                       // })
                        // .when('/courses/:course_id', {
                        //     templateUrl: 'views/courseDetails.ejs',
                        //     controller:  'CourseDetailsController'

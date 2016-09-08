@@ -10,8 +10,12 @@
     <body ng-app="noobLearn">
         <% include layout/navbar.ejs %>
         <div class="container">
-            <% include partials/courses.ejs %>
-
+            <div class="col-md-8">
+                <% include partials/courses.ejs %>
+            </div>
+            <div class="col-md-4">
+                <% include partials/new-course.ejs %>
+            </div>
         </div>
 
 

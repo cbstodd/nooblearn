@@ -47,4 +47,4 @@ app.use('/api', router);
 var port = process.env.PORT || 3000;
 // Start the server
 app.listen(port);
-console.log('Insert course on port http://localhost:' + port);
+console.log('Express listening on port http://localhost:' + port);
