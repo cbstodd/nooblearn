@@ -9,7 +9,7 @@
     </head>
     <body ng-app="noobLearn">
         <% include layout/navbar.ejs %>
-        <div class="container">
+        <div class="container" ng-controller="CourseController">
             <div class="col-md-8">
                 <% include partials/courses.ejs %>
             </div>
@@ -18,6 +18,6 @@
             </div>
         </div>
 
-
+        <% include layout/footer-scripts.ejs %>
     </body>
 </html>

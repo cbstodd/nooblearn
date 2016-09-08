@@ -46,7 +46,7 @@ exports.getCourse = function(req, res) {
     });
 };
 
-// Create endpoint /api/courses/:course_id for PUT
+// Create endpoint /api/courses/:course_id for PUT/EDIT/UPDATE
 exports.putCourse = function(req, res) {
     // Use the Course model to find a specific course
     Course.findById(req.params.course_id, function(err, course) {
@@ -74,5 +74,6 @@ exports.deleteCourse = function(req, res) {
             res.send(err);
 
         res.json({ message: 'Course removed from the database!' });
+        console.log("Course removed from the database!");
     });
 };

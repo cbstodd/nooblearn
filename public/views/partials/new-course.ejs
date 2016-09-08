@@ -1,4 +1,4 @@
-<div ng-controller="NewCourseController">
+<div>
     <form method="post">
         <h3>Add new course</h3>
 
@@ -58,6 +58,8 @@
                     ng-model="formData.imageUrl">
         </div>
 
+        <!-- // TODO: ADD EDIT AND UPDATE FUNCTIONS. -->
         <button type="submit" class="btn btn-primary" ng-click="postCourse()">Submit</button>
+        <button type="submit" class="btn btn-info" ng-click="update()">Update</button>
     </form>
 </div>
