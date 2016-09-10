@@ -54,7 +54,12 @@ exports.putCourse = function(req, res) {
             res.send(err);
 
         // Update the existing course quantity
-        course.quantity = req.body.quantity;
+        course.progress = req.body.progress;
+        course.imageUrl = req.body.imageUrl;
+        course.experienceLevel = req.body.experienceLevel;
+        course.language = req.body.language;
+        course.description = req.body.description;
+        course.title = req.body.title;
 
         // Save the course and check for errors
         course.save(function(err) {

@@ -23,7 +23,7 @@
             <ul class="list-group course well" ng-repeat="course in courses">
                 <p><button class="btn btn-danger btn-sm" style="float:right;" ng-click="deleteCourse(course._id)">Delete</button></p>
                 <br>
-                <p><button class="btn btn-default btn-sm" style="float:right; margin-top:5px;" ng-click="putCourse(course._id)">Edit</button></p>
+                <p><button class="btn btn-default btn-sm" style="float:right; margin-top:5px;" ng-click="editCourse(course._id)">Edit</button></p>
                 <li>
                     <h3><b>Course:</b> {{ course.title }}</h3></li>
                 <hr>
