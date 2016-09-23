@@ -8,8 +8,8 @@
     "start": "node server.js"
   },
   "engines": {
-    "node": "6.3.x",
-    "npm": "3.10.x"
+    "node": "6.3.1",
+    "npm": "3.10.3"
   },
   "author": "Colin Stodd (http://www.colinstodd.com)",
   "license": "ISC",
