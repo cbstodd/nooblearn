@@ -1,4 +1,4 @@
-// Get the packages we need
+// Get the dependencies 
 var express          = require('express'),
     bodyParser       = require('body-parser'),
     mongoose         = require('mongoose'),

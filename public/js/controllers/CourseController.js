@@ -2,12 +2,10 @@
 
 var app = angular.module('noobLearn', []);
 
-// angular.module('noobLearn.services').factory('Entry', function( $resource ) {
-//     return $resource('/api/courses/:course_id');
-// });
-
 app.controller('CourseController', function( $scope, $http ) {
+
     var refresh = function() { //Refreshes page
+        //Get Courses
         $http({
             method: 'GET',
             url:    '/api/courses'
