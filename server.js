@@ -50,7 +50,7 @@ app.use('/api', router);
 
 // Use environment defined port or 3000
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 // Start the server
 app.listen(port);
 console.log('## Express listening on port http://localhost:' + port + ' ##');
