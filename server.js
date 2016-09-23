@@ -7,8 +7,13 @@ var express          = require('express'),
     passport         = require('passport');
     // authController   = require('./server/controllers/auth');
 
+var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-mongoose.connect('mongodb://localhost:27017/noobsee');
+if (env === 'development'){
+    mongoose.connect('mongodb://localhost:27017/noobsee');
+} else {
+    mongoose.connect('mongodb://cbstodd:Damntone8@ds019976.mlab.com:19976/noobsee');
+}
 
 var app = express();
 
@@ -44,7 +49,8 @@ router.route('/courses/:course_id')
 app.use('/api', router);
 
 // Use environment defined port or 3000
-var port = process.env.PORT || 3000;
+
+var port = 3000;
 // Start the server
 app.listen(port);
-console.log('Express listening on port http://localhost:' + port);
+console.log('## Express listening on port http://localhost:' + port + ' ##');
