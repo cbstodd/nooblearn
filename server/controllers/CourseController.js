@@ -1,5 +1,5 @@
 // Load required packages
-var Course = require('../models/course');
+var Course = require('../models/Course');
 
 // Create endpoint /api/courses for POSTS
 exports.postCourses = function(req, res) {
@@ -12,6 +12,7 @@ exports.postCourses = function(req, res) {
     course.experienceLevel = req.body.experienceLevel;
     course.language = req.body.language;
     course.description = req.body.description;
+    course.orderId = req.body.orderId;
     course.title = req.body.title;
 
     // Save the course and check for errors
@@ -59,6 +60,7 @@ exports.putCourse = function(req, res) {
         course.experienceLevel = req.body.experienceLevel;
         course.language = req.body.language;
         course.description = req.body.description;
+        course.positionId = req.body.positionId;
         course.title = req.body.title;
 
         // Save the course and check for errors

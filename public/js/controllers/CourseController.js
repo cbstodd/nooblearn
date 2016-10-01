@@ -1,7 +1,5 @@
 'use strict';
 
-var app = angular.module('noobLearn', []);
-
 app.controller('CourseController', function( $scope, $http ) {
 
     var refresh = function() { //Refreshes page

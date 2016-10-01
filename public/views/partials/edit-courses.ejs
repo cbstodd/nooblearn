@@ -1,0 +1,106 @@
+<div ng-controller="CourseController">
+    <div class="col-lg-4 col-md-4">
+        <form method="post">
+            <h3>Add new course</h3>
+
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text"
+                        name="title"
+                        id="title"
+                        class="form-control"
+                        value=""
+                        title=""
+                        required="required"
+                        ng-model="formData.title">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+            <textarea type="text"
+                    name="description"
+                    id="description"
+                    class="form-control"
+                    value=""
+                    title=""
+                    rows="3"
+                    ng-model="formData.description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="language">Language</label>
+                <input type="text"
+                        name="language"
+                        id="language"
+                        class="form-control"
+                        value=""
+                        title=""
+                        ng-model="formData.language">
+            </div>
+
+            <div class="form-group">
+                <label for="experienceLevel">Experience level</label>
+                <input type="number"
+                        name="experienceLevel"
+                        id="experienceLevel"
+                        class="form-control"
+                        value="0"
+                        title=""
+                        ng-model="formData.experienceLevel">
+            </div>
+
+            <div class="form-group">
+                <label for="imageUrl">Image URL</label>
+                <input type="text"
+                        name="imageUrl"
+                        id="imageUrl"
+                        class="form-control"
+                        value="http://" title=""
+                        ng-model="formData.imageUrl">
+            </div>
+
+            <div class="form-group">
+                <label for="positionId">ID</label>
+                <input type="number"
+                        name="positionId"
+                        id="positionId"
+                        class="form-control"
+                        value="0" title=""
+                        ng-model="formData.positionId">
+            </div>
+
+            <!-- // TODO: ADD EDIT AND UPDATE FUNCTIONS. -->
+            <button type="submit" class="btn btn-primary" ng-click="saveCourse()">Submit</button>
+            <button type="submit" class="btn btn-info" ng-click="updateCourse()">Update</button>
+        </form>
+    </div>
+
+    <div class="col-lg-8 col-md-8">
+        <h3>Courses</h3>
+
+        <hr class="thick-line">
+        <div class="row">
+            <div class="col-lg-8">
+                <ul class="list-group course well" ng-repeat="course in courses">
+                    <p><button class="btn btn-danger btn-sm" style="float:right;" ng-click="deleteCourse(course._id)">Delete</button></p>
+                    <br>
+                    <p><button class="btn btn-default btn-sm" style="float:right; margin-top:5px;" ng-click="editCourse(course._id)">Edit</button></p>
+                    <li><h3>{{ course.title }}</h3></li>
+                    <hr>
+                    <li>
+                        <img ng-src="{{course.imageUrl}}" alt="" class="img-responsive img-thumbnail course-thumb">
+                    </li>
+                    <br>
+                    <li>ID: {{course.positionId}}</li>
+                    <li><b>Description:</b> {{ course.description }}</li>
+                    <li><b>Language:</b> {{ course.language }}</li>
+                    <li><b>Level:</b> {{ course.experienceLevel}}</li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

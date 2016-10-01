@@ -9,13 +9,9 @@
     </head>
     <body ng-app="noobLearn">
         <% include layout/navbar.ejs %>
-        <div class="container" ng-controller="CourseController">
-            <div class="col-md-8">
-                <% include partials/courses.ejs %>
-            </div>
-            <div class="col-md-4">
-                <% include partials/new-course.ejs %>
-            </div>
+
+        <div class="container">
+            <ng-view></ng-view>
         </div>
 
         <% include layout/footer-scripts.ejs %>

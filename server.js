@@ -15,4 +15,4 @@ require('./server/config/routes')(app);
 
 // Start the server
 app.listen(config.port);
-console.log('## Express listening on port http://' + config.port + ' ##');
+console.log('## Express listening on port ' + config.port + ' ##');

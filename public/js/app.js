@@ -3,25 +3,30 @@
 var app = angular.module('noobLearn', ['ngRoute'])
                  .config(function( $routeProvider, $locationProvider ) {
                      $routeProvider
-                       // .when('/', {
-                           //TODO: Need to uncomment for production mode
-                           //  templateUrl: 'views/home.ejs',
-                           // controller:  'HomeController'
-                           // templateUrl: 'views/partials/index.ejs',
-                           // controller:  'CourseController'
-                       // })
-                       // .when('/courses', {
-                       //     templateUrl: 'views/partials/index.ejs',
-                       //     controller:  'CourseController'
-                       // })
-                       // .when('/courses/:course_id', {
-                       //     templateUrl: 'views/courseDetails.ejs',
-                       //     controller:  'CourseDetailsController'
-                       // })
-                       // .when('/likes', {
-                       //     templateUrl: 'views/likes.ejs',
-                       //     controller:  'LikesController'
-                       // })
+                       .when('/', {
+                           templateUrl: 'views/partials/courses.ejs',
+                           controller:  'CourseController'
+                       })
+                       .when('/home', {
+                           templateUrl: 'views/partials/home.ejs',
+                           controller:  'HomeController'
+                       })
+                       .when('/courses', {
+                           templateUrl: 'views/partials/courses.ejs',
+                           controller:  'CourseController'
+                       })
+                       .when('/edit-course', {
+                           templateUrl: 'views/partials/edit-courses.ejs',
+                           controller:  'CourseController'
+                       })
+                       .when('/courses/:course_id', {
+                           templateUrl: 'views/courseDetails.ejs',
+                           controller:  'CourseDetailsController'
+                       })
+                       .when('/likes', {
+                           templateUrl: 'views/likes.ejs',
+                           controller:  'LikesController'
+                       })
                        .otherwise({
                            templateUrl: '/'
                        });

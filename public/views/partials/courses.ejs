@@ -1,5 +1,5 @@
-<div>
-    <h3>Featured Courses</h3>
+<div ng-controller="CourseController">
+    <h3>Courses</h3>
 
     <!--<div class="row">-->
         <!--&lt;!&ndash;<div class="col-lg-12">&ndash;&gt;-->
@@ -21,16 +21,13 @@
     <div class="row">
         <div class="col-lg-8">
             <ul class="list-group course well" ng-repeat="course in courses">
-                <p><button class="btn btn-danger btn-sm" style="float:right;" ng-click="deleteCourse(course._id)">Delete</button></p>
-                <br>
-                <p><button class="btn btn-default btn-sm" style="float:right; margin-top:5px;" ng-click="editCourse(course._id)">Edit</button></p>
                 <li><h3>{{ course.title }}</h3></li>
                 <hr>
                 <li>
                     <img ng-src="{{course.imageUrl}}" alt="" class="img-responsive img-thumbnail course-thumb">
                 </li>
                 <br>
-                <li>ID: {{course.course_id}}</li>
+                <li>ID: {{course.positionId}}</li>
                 <li><b>Description:</b> {{ course.description }}</li>
                 <li><b>Language:</b> {{ course.language }}</li>
                 <li><b>Level:</b> {{ course.experienceLevel}}</li>
@@ -45,4 +42,5 @@
             </ul>
         </div>
     </div>
+
 </div><!--~ End CoursesCtrl ~-->

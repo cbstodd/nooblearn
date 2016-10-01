@@ -1,5 +1,5 @@
 var express          = require('express'),
-    courseController = require('../controllers/CourseController');
+    courseController = require('../controllers/courseController');
     // userController   = require('./server/controllers/UserController'),
     // passport         = require('passport');
     // authController   = require('./server/controllers/auth');
