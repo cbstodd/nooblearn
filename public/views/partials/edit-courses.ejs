@@ -1,7 +1,9 @@
-<div ng-controller="CourseController">
-    <div class="col-lg-4 col-md-4">
+<div ng-controller="EditCourseController">
+    <div class="row">
+        <div class="col-lg-5">
         <form method="post">
-            <h3>Add new course</h3>
+            <h3>Edit course</h3>
+            <p><i>Find the course you want to edit</i></p>
 
             <div class="form-group">
                 <label for="title">Title</label>
@@ -75,32 +77,31 @@
         </form>
     </div>
 
-    <div class="col-lg-8 col-md-8">
-        <h3>Courses</h3>
+    <div class="col-lg-1"></div>
 
-        <hr class="thick-line">
-        <div class="row">
-            <div class="col-lg-8">
-                <ul class="list-group course well" ng-repeat="course in courses">
-                    <p><button class="btn btn-danger btn-sm" style="float:right;" ng-click="deleteCourse(course._id)">Delete</button></p>
-                    <br>
-                    <p><button class="btn btn-default btn-sm" style="float:right; margin-top:5px;" ng-click="editCourse(course._id)">Edit</button></p>
-                    <li><h3>{{ course.title }}</h3></li>
-                    <hr>
-                    <li>
-                        <img ng-src="{{course.imageUrl}}" alt="" class="img-responsive img-thumbnail course-thumb">
-                    </li>
-                    <br>
-                    <li>ID: {{course.positionId}}</li>
-                    <li><b>Description:</b> {{ course.description }}</li>
-                    <li><b>Language:</b> {{ course.language }}</li>
-                    <li><b>Level:</b> {{ course.experienceLevel}}</li>
+        <div class="col-lg-6">
+            <h3>Courses</h3>
+            <div class="row">
+                <div class="col-lg-8">
+                    <ul class="list-group course well" ng-repeat="course in courses">
+                        <p><button class="btn btn-danger btn-sm" style="float:right;" ng-click="deleteCourse(course._id)">Delete</button></p>
+                        <br>
+                        <p><button class="btn btn-default btn-sm" style="float:right; margin-top:5px;" ng-click="editCourse(course._id)">Edit</button></p>
+                        <li><h3>{{ course.title }}</h3></li>
+                        <hr>
+                        <li>
+                            <img ng-src="{{course.imageUrl}}" alt="" class="img-responsive img-thumbnail course-thumb">
+                        </li>
+                        <br>
+                        <li>ID: {{course.positionId}}</li>
+                        <li><b>Description:</b> {{ course.description }}</li>
+                        <li><b>Language:</b> {{ course.language }}</li>
+                        <li><b>Level:</b> {{ course.experienceLevel}}</li>
 
-                </ul>
+                    </ul>
+                </div>
             </div>
         </div>
-
     </div>
-
 
 </div>
