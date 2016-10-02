@@ -8,7 +8,6 @@ var CourseSchema = new mongoose.Schema({
     experienceLevel: Number,
     language:        String,
     description:     String,
-    positionId:      Number,
     title:           String
     // userId:          String
 });
