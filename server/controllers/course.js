@@ -1,6 +1,6 @@
 // Load required packages
 var express = require('express'),
-    Course  = require('../models/Course');
+    Course  = require('../models/course');
 
 // Create endpoint /api/courses for POSTS
 exports.postCourses = function( req, res ) {

@@ -1,7 +1,7 @@
 // Load required packages
 var passport      = require('passport'),
     BasicStrategy = require('passport-http').BasicStrategy,
-    User          = require('../models/User');
+    User          = require('../models/user');
 
 passport.use(new BasicStrategy(
   function( username, password, callback ) {
