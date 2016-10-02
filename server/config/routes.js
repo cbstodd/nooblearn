@@ -1,8 +1,8 @@
 var express          = require('express'),
-    courseController = require('../controllers/course'),
-    userController   = require('../controllers/user'),
+    courseController = require('../controllers/courseCtrl'),
+    userController   = require('../controllers/userCtrl'),
     passport         = require('passport'),
-    authController   = require('../controllers/auth');
+    authController   = require('../controllers/authCtrl');
 
 
 module.exports = function( app ) {
