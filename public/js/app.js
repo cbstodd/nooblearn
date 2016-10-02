@@ -18,7 +18,7 @@ app.config(function( $routeProvider, $locationProvider ) {
       })
       .when('/edit-course', {
           templateUrl: 'views/partials/edit-courses.ejs',
-          controller:  'EditCourseController'
+          controller:  'CourseController'
       })
       .when('/courses/:course_id', {
           templateUrl: 'views/courseDetails.ejs',
