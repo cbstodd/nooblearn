@@ -24,6 +24,14 @@ app.config(function( $routeProvider, $locationProvider ) {
           templateUrl: 'views/courseDetails.ejs',
           controller:  'CourseDetailsController'
       })
+      .when('/signup', {
+          templateUrl: 'views/partials/auth/signup.ejs',
+          controller: 'AuthController'
+      })
+      .when('/signin', {
+          templateUrl: 'views/partials/auth/signin.ejs',
+          controller: 'AuthController'
+      })
       .when('/likes', {
           templateUrl: 'views/likes.ejs',
           controller:  'LikesController'
